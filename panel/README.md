@@ -1,0 +1,1 @@
+Next.js panel skeleton

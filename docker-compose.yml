@@ -1,0 +1,36 @@
+services:
+  core:
+    build: ./agentos-core
+    ports:
+    - 8000:8000
+  grafana:
+    image: grafana/grafana
+    ports:
+    - 3000:3000
+  mongo:
+    image: mongo
+    ports:
+    - 27017:27017
+  panel:
+    build: ./panel
+    ports:
+    - 3020:3000
+  pessoas:
+    build: ./agentos-pessoas
+  prometheus:
+    image: prom/prometheus
+    ports:
+    - 9090:9090
+    volumes:
+    - ./monitoring/prometheus:/etc/prometheus
+  redis:
+    image: redis
+    ports:
+    - 6379:6379
+  sales:
+    build: ./agentos-sales
+  scout:
+    build: ./agentos-scout
+    ports:
+    - 8012:8000
+version: '3'
