@@ -1,0 +1,8 @@
+{
+  "name": "agentos-horizontal",
+  "private": true,
+  "scripts": {
+    "build": "npm install --prefix panel && npm run build --prefix panel",
+    "start": "npm run start --prefix panel"
+  }
+}
